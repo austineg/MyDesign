@@ -1,19 +1,37 @@
 <html>
-<head>
-    <title>CSS Animation Effect</title>
-    <link rel="stylesheet"  href="C:\xampp\htdocs\Loading\design\style.css" />
+  <head>
+<title>Card Hover Animation</title>
+<link rel="stylesheet" href="C:\xampp\htdocs\photo_text\design\style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 
-<body>
-    <div class="container">
-        <div class="loader"><span></span></div>
-    </div>
+  <body>
+      <div class="card">
+          <div class="image">
+              <img src="photoshot.jpg">
+      </div>
+      <div class="content">
+          <div class="title">Card Hover Animation</div>
+          <div class="sub-title">HTML and CSS (Animation)</div>
+          <div class="bottom">
+              <p>z-index is a css property that defines the order of overlapping html element, like as being used for this graphics.</p>
+        <button>Read more</button>
+            </div>
+      </div>
+      </div>
+      <script>
+        $('.card').hover(function(){
+            if($(this).hasClass("active")){
+                $('.card .bottom').slideUp(function(){
+                    $('.card').removeClass("active");
+                });
+            }else{
+                $('.card').addClass("active");
+                $('.card .bottom').stop().slideDown();
+            }
+        });
+      </script>
+  </body>
 
-
-
-
-
-
-</body>
 
 </html>
