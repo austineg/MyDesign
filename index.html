@@ -1,37 +1,64 @@
-<html>
-  <head>
-<title>Card Hover Animation</title>
-<link rel="stylesheet" href="C:\xampp\htdocs\photo_text\design\style.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c9569f2ad2.js" crossorigin="anonymous"></script>
 </head>
+<body>
+    <div class="container">
+        <div class="form-box">
+        <h1 id="title">sign up</h1>
+        <form>
+        <div class="input-group">
 
-  <body>
-      <div class="card">
-          <div class="image">
-              <img src="photoshot.jpg">
-      </div>
-      <div class="content">
-          <div class="title">Card Hover Animation</div>
-          <div class="sub-title">HTML and CSS (Animation)</div>
-          <div class="bottom">
-              <p>z-index is a css property that defines the order of overlapping html element, like as being used for this graphics.</p>
-        <button>Read more</button>
-            </div>
-      </div>
-      </div>
-      <script>
-        $('.card').hover(function(){
-            if($(this).hasClass("active")){
-                $('.card .bottom').slideUp(function(){
-                    $('.card').removeClass("active");
-                });
-            }else{
-                $('.card').addClass("active");
-                $('.card .bottom').stop().slideDown();
-            }
-        });
-      </script>
-  </body>
+              <div class="input-field" id="nameField">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name">
+           </div>
 
+           <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Email">
+       </div>
 
+       <div class="input-field">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password">
+   </div>
+      <p>Lost password <a href="#">Click here!</a></p>     
+        </div>
+        <div class="btn-field">
+            <button type="button" id="signupBtn">Sign up</button>
+            <button type="button" id="signinBtn" class="disable">Sign in</button>
+        </div>
+    </form>
+        </div>
+    </div>
+
+    <script>
+
+  let signupBtn = document.getElementById("signupBtn");
+  let signinBtn = document.getElementById("signinBtn");
+  let nameField = document.getElementById("nameField");
+  let title = document.getElementById("title");
+
+  signinBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "sign in";
+    signinBtn.classList.remove("disable");
+    signupBtn.classList.add("disable");
+  }
+
+  signupBtn.onclick = function(){
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "sign up";
+    signinBtn.classList.add("disable");
+    signupBtn.classList.remove("disable");
+  }
+
+    </script>
+</body>
 </html>
