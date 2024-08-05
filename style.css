@@ -1,103 +1,34 @@
-/* .navbar{ 
-    background-color: #fff;
-    height: 60px;
-    margin: 24px;
-    border-radius: 30px;
-    padding: 0.5em;
- } */
-
-.navbar-nav{
-    justify-content: right;
+html, body{
+    height: 100%;
+    width: 55vh;
+    place-items: center;
+    background: #f2f2f2;
+    text-align: center;
 }
 
-.navbar-brand{
-    font-weight: 500;
-    color: #009979;
-    font-size: 24px;
-    transition: 0.3s color;
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.login-button{
-    background-color: #009970;
-    color: #fff;
-    font-size: 14px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s background-color;
+.image{
+    height: 290%;
+    width: 300px;
+    margin: 0 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.login-button:hover{
-    background-color: #00b383;
-} 
-
-.navbar-toggler{
-    border: none;
-    font-size: 1.25em;
-}
-
-.navbar-toggler:focus{
-    box-shadow: none;
-    outline: none;
-}
-
-.nav-link{
-    color: #666777;
-    font-weight: 500;
-    position: relative;
-}
-
-.nav-link:hover, .nav-link.active{
-    color: #000;
-}
-
-@media (min-width:991px){
-  .nav-link::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 2px;
-    background-color: #009970;
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
-}
-
-.nav-link:hover::before, .nav-link.active::before{
- width: 80%;
- visibility: visible;
- }
-}
-
-.hero-section{
-    background: url(hero-bg.jpeg) no-repeat center;
-    background-size: cover;
+.image img{
+    height: 100%;
     width: 100%;
-    height: 100vh;
-}
- 
-.hero-section::before{
-    background-color: rgba(0, 0green, 0blue, 0.6alpha);
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
-.hero-section .container{
-    height: 100vh;
-    z-index: 1;
-  position: relative;
+.bottom button{
+    margin-bottom: 10px;
+    border-radius: 7px;
 }
 
-.hero-section h1{
-    font-size: 1.5em;
-}
-
-.hero-section h2{
-    font-size: 1.2em;
+.bottom button:hover{
+    color: rgb(255,0,0);
 }
